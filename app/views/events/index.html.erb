@@ -1,0 +1,57 @@
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Pname</th>
+    <th>Address</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Partystarttime</th>
+    <th>Partyendtime</th>
+    <th>Ladiesinfree</th>
+    <th>Guestlistcutofftime</th>
+    <th>Everybodyinfree</th>
+    <th>Everyfreeuntil</th>
+    <th>Industryevent</th>
+    <th>Celebappearance</th>
+    <th>Drinkspecials</th>
+    <th>Drinkspecialsuntil</th>
+    <th>Guestlist</th>
+    <th>Cost1</th>
+    <th>Cost2</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.description %></td>
+    <td><%= event.pname %></td>
+    <td><%= event.address %></td>
+    <td><%= event.state %></td>
+    <td><%= event.zipcode %></td>
+    <td><%= event.partystarttime %></td>
+    <td><%= event.partyendtime %></td>
+    <td><%= event.ladiesinfree %></td>
+    <td><%= event.guestlistcutofftime %></td>
+    <td><%= event.everybodyinfree %></td>
+    <td><%= event.everyfreeuntil %></td>
+    <td><%= event.industryevent %></td>
+    <td><%= event.celebappearance %></td>
+    <td><%= event.drinkspecials %></td>
+    <td><%= event.drinkspecialsuntil %></td>
+    <td><%= event.guestlist %></td>
+    <td><%= event.cost1 %></td>
+    <td><%= event.cost2 %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event', new_event_path %>

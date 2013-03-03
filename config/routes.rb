@@ -1,5 +1,8 @@
 Life2nite::Application.routes.draw do
   
+  resources :events
+
+
   devise_for :promotors
 
   devise_for :users

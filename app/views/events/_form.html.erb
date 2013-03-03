@@ -1,0 +1,89 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :pname %><br />
+    <%= f.text_field :pname %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :partystarttime %><br />
+    <%= f.datetime_select :partystarttime %>
+  </div>
+  <div class="field">
+    <%= f.label :partyendtime %><br />
+    <%= f.datetime_select :partyendtime %>
+  </div>
+  <div class="field">
+    <%= f.label :ladiesinfree %><br />
+    <%= f.check_box :ladiesinfree %>
+  </div>
+  <div class="field">
+    <%= f.label :guestlistcutofftime %><br />
+    <%= f.datetime_select :guestlistcutofftime %>
+  </div>
+  <div class="field">
+    <%= f.label :everybodyinfree %><br />
+    <%= f.check_box :everybodyinfree %>
+  </div>
+  <div class="field">
+    <%= f.label :everyfreeuntil %><br />
+    <%= f.datetime_select :everyfreeuntil %>
+  </div>
+  <div class="field">
+    <%= f.label :industryevent %><br />
+    <%= f.check_box :industryevent %>
+  </div>
+  <div class="field">
+    <%= f.label :celebappearance %><br />
+    <%= f.check_box :celebappearance %>
+  </div>
+  <div class="field">
+    <%= f.label :drinkspecials %><br />
+    <%= f.text_field :drinkspecials %>
+  </div>
+  <div class="field">
+    <%= f.label :drinkspecialsuntil %><br />
+    <%= f.datetime_select :drinkspecialsuntil %>
+  </div>
+  <div class="field">
+    <%= f.label :guestlist %><br />
+    <%= f.check_box :guestlist %>
+  </div>
+  <div class="field">
+    <%= f.label :cost1 %><br />
+    <%= f.text_field :cost1 %>
+  </div>
+  <div class="field">
+    <%= f.label :cost2 %><br />
+    <%= f.text_field :cost2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

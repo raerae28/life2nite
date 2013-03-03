@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyString
+  pname: MyString
+  address: MyString
+  state: MyString
+  zipcode: MyString
+  partystarttime: 2013-03-03 13:21:32
+  partyendtime: 2013-03-03 13:21:32
+  ladiesinfree: false
+  guestlistcutofftime: 2013-03-03 13:21:32
+  everybodyinfree: false
+  everyfreeuntil: 2013-03-03 13:21:32
+  industryevent: false
+  celebappearance: false
+  drinkspecials: MyString
+  drinkspecialsuntil: 2013-03-03 13:21:32
+  guestlist: false
+  cost1: 9.99
+  cost2: 9.99
+
+two:
+  description: MyString
+  pname: MyString
+  address: MyString
+  state: MyString
+  zipcode: MyString
+  partystarttime: 2013-03-03 13:21:32
+  partyendtime: 2013-03-03 13:21:32
+  ladiesinfree: false
+  guestlistcutofftime: 2013-03-03 13:21:32
+  everybodyinfree: false
+  everyfreeuntil: 2013-03-03 13:21:32
+  industryevent: false
+  celebappearance: false
+  drinkspecials: MyString
+  drinkspecialsuntil: 2013-03-03 13:21:32
+  guestlist: false
+  cost1: 9.99
+  cost2: 9.99
