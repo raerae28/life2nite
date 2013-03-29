@@ -1,57 +1,100 @@
-<h1>Listing events</h1>
-
-<table>
-  <tr>
-    <th>Description</th>
-    <th>Pname</th>
-    <th>Address</th>
-    <th>State</th>
-    <th>Zipcode</th>
-    <th>Partystarttime</th>
-    <th>Partyendtime</th>
-    <th>Ladiesinfree</th>
-    <th>Guestlistcutofftime</th>
-    <th>Everybodyinfree</th>
-    <th>Everyfreeuntil</th>
-    <th>Industryevent</th>
-    <th>Celebappearance</th>
-    <th>Drinkspecials</th>
-    <th>Drinkspecialsuntil</th>
-    <th>Guestlist</th>
-    <th>Cost1</th>
-    <th>Cost2</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<HEAD>
+  <script type="text/javascript" src="assets/twitterbootstrap/js/bootstrap-tab.js"></script>
+</HEAD>
+<div class="hero-unit">
+<h2>Listing events</h2>
 
 <% @events.each do |event| %>
-  <tr>
-    <td><%= event.description %></td>
-    <td><%= event.pname %></td>
-    <td><%= event.address %></td>
-    <td><%= event.state %></td>
-    <td><%= event.zipcode %></td>
-    <td><%= event.partystarttime %></td>
-    <td><%= event.partyendtime %></td>
-    <td><%= event.ladiesinfree %></td>
-    <td><%= event.guestlistcutofftime %></td>
-    <td><%= event.everybodyinfree %></td>
-    <td><%= event.everyfreeuntil %></td>
-    <td><%= event.industryevent %></td>
-    <td><%= event.celebappearance %></td>
-    <td><%= event.drinkspecials %></td>
-    <td><%= event.drinkspecialsuntil %></td>
-    <td><%= event.guestlist %></td>
-    <td><%= event.cost1 %></td>
-    <td><%= event.cost2 %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <div class="media">
+    <a class="pull-left" href="#">
+        <img class="media-object" src="/assets/27.jpg">
+    </a>
+    <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    
 
-<br />
+  <ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#page1">Page 1</a></li>
+    <li><a href="#page2">Page 2</a></li>
+    <li><a href="#page3">Page 3</a></li>
+  </ul>
+ 
+  <div class="tab-content">
+    <div class="tab-pane active" id="page1">
+      <table class="table-tablestriped">
+        <tr>
+          <th>Description</th>
+          <th>Pname</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zipcode</th>
+          <th>Partystarttime</th>
+          <th>Partyendtime</th>
+        </tr>
+        <tr>
+          <td><%= event.description %></td>
+          <td><%= event.pname %></td>
+          <td><%= event.address %></td>
+          <td><%= event.state %></td>
+          <td><%= event.city %></td>
+          <td><%= event.zipcode %></td>
+          <td><%= event.partystarttime %></td>
+          <td><%= event.partyendtime %></td>
+        </tr>
+      </table>
+    </div>
+    <div class="tab-pane" id="page2">
+      <table class="table-tablestriped">
+        <tr>
+          <th>Ladiesinfree</th>
+          <th>Guestlistcutofftime</th>
+          <th>Everybodyinfree</th>
+          <th>Everyfreeuntil</th>
+          <th>Industryevent</th>
+          <th>Celebappearance</th>
+          <th>Drinkspecials</th>
+          <th>Drinkspecialsuntil</th>
+        </tr>
+        <tr>
+          <td><%= event.ladiesinfree %></td>
+          <td><%= event.guestlistcutofftime %></td>
+          <td><%= event.everybodyinfree %></td>
+          <td><%= event.everyfreeuntil %></td>
+          <td><%= event.industryevent %></td>
+          <td><%= event.celebappearance %></td>
+          <td><%= event.drinkspecials %></td>
+          <td><%= event.drinkspecialsuntil %></td>
+        </tr>
+      </table>        
+    </div>
+    <div class="tab-pane" id="page3">
+      <table class="table-tablestriped">
+        <tr>
+          <th>Guestlist</th>
+          <th>Cost1</th>
+          <th>Cost2</th>
+        </tr>
+        <tr>
+          <td><%= event.guestlist %></td>
+          <td><%= event.cost1 %></td>
+          <td><%= event.cost2 %></td>
+        </tr>    
+    </div>
+  </div>
+  <table> 
+    <tr>
+      <td><%= link_to 'Show', event %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </table>
+
+
+</div>     
+</div>
+</div>
+
+<% end %>
 
 <%= link_to 'New Event', new_event_path %>

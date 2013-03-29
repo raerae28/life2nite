@@ -22,12 +22,21 @@
 		</ul>
 
 		 <ul class="nav pull-right">
+
           <% if user_signed_in? %>
-              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              <li><%= link_to "Edit User Profile", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% elsif promotor_signed_in? %>
+             
+              <li><%= link_to "Edit Promotor Profile", edit_promotor_registration_path %></li>
+              <li><%= link_to "Logout", destroy_promotor_session_path, method: :delete %></li>
           <% else %>
-	            <li><%= link_to "Login", new_user_session_path %></li>
+              <li><%= link_to "Promotor Login", new_promotor_session_path %></li>
+	            <li><%= link_to "User Login", new_user_session_path %></li>
 			    <% end %>
+
+
+
 		</ul>
 
       </div>
